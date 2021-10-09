@@ -1,47 +1,69 @@
-import React, { Component } from 'react'
-import m1 from './m1.jpg';
-import m2 from './m2.jpg';
-import m3 from './m3.jpg';
+import React, { Component } from "react";
 
+import Movieitem from "./Movieitem";
+// import { useEffect } from "react";
+// import axios from "axios";
 export class Movie extends Component {
-    render() {
-        return (
-            <>
-            <div className="container my-4">
-              <div className="row">
-            <div className="col-md-4">
-              <div className="info">
-                <div className="icon icon-rose">
-                  <img src={m1} alt="img" className="material-icons"/>
+  // static defaultProps = {
+  //   region: "in",
+  //   pageSize: 9,
+  //   category: "general",
+  // };
+
+  // static propType = {
+  //   country: PropTypes.string,
+  //   pageSize: PropTypes.number,
+  //   category: PropTypes.string,
+  // };
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      results: [],
+      loading: false,
+      page: 1,
+      total_results: 0,
+    };
+  }
+
+  async componentDidMount() {
+    let url = `https://api.themoviedb.org/3/movie/top_rated?api_key=8715e8842217df4604773f0cef2fca91&language=en-US&page=1`;
+    let data = await fetch(url);
+    let parsedata = await data.json();
+
+    this.setState({
+      results: parsedata.results,
+      total_results: parsedata.total_results,
+      loading: false,
+    });
+    console.log(this.state.results);
+  }
+
+  render() {
+    return (
+      <>
+        <div className="container bg-secondary  my-4">
+          <div className="row justify-content-center">
+            {this.state.results.map((element) => {
+              return (
+                <div className="col-md-10 cardSty" key={element.id}>
+                  <Movieitem
+                    language={element.original_language}
+                    vote_average={element.vote_average}
+                    original_title={element.original_title}
+                    title={element.title}
+                    release_date={element.release_date}
+                    overview={element.overview}
+                    imageUrl={element.poster_path}
+                  />
                 </div>
-                <h4 className="info-title">Huge Number of Components</h4>
-                <p>Every element that you need in a product comes built in as a component. All components fit perfectly with each other and can take variations in colour.</p>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="info">
-                <div className="icon icon-info">
-                  <img src={m2} alt="jj" className="material-icons"/>
-                </div>
-                <h4 className="info-title">Multi-Purpose Sections</h4>
-                <p>Putting together a page has never been easier than matching together sections. From team presentation to pricing options, you can easily customise and built your pages.</p>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="info">
-                <div className="icon icon-success">
-                  <img src={m3} alt="aaa" className="material-icons"/>
-                </div>
-                <h4 className="info-title">Example Pages</h4>
-                <p>If you want to get inspiration or just show something directly 
-                    to your clients, you can jump start your development with our pre-built example pages.</p>
-              </div>
-            </div>
-          </div>  
+              );
+            })}
           </div>
-            </>
-        )
-    }
+        </div>
+      </>
+    );
+  }
 }
 
-export default Movie
+export default Movie;

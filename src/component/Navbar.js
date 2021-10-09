@@ -11,7 +11,7 @@ export class Navbar extends Component {
               <nav className="navbar navbar-expand-lg navbar-light  blur blur-rounded top-0 z-index-fixed shadow nav-sty position-absolute my-3 py-2 start-0 end-0 mx-4">
                 <div className="container-fluid px-0">
                   <a
-                    className="navbar-brand font-weight-bolder ms-sm-3"
+                    className="navbar-brand font-weight-bolder ps-1 ms-sm-3"
                     href=" https://demos.creative-tim.com/marketplace/soft-ui-design-system-pro/presentation.html "
                     rel="tooltip"
                     title="Designed and Coded by Creative Tim"
