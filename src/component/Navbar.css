@@ -126,10 +126,10 @@ navbar-toggler-icon:focus {
 .movie-overviews {
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 26%;
   right: 0;
   color: black;
-  background-color: #fff;
+  background-color: rgba(214, 214, 214, 1);
   transform: translateX(100%);
   transition: transform 0.1s ease-in-out;
   overflow: auto;
@@ -137,4 +137,22 @@ navbar-toggler-icon:focus {
 }
 .card:hover .movie-overviews {
   transform: translateX(0%);
+}
+.np{
+  background-color: #fff;
+  color: #000;
+  box-shadow: 10px 10px 10px #000;
+  margin-left: 20px;
+  margin-right: 20px;
+  border: 1px solid rgb(197, 196, 196);
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 0% 20%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.np:hover{
+  background-color: rgba(0, 0, 0, 0.445);
+  color: #fff;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius:0% 20%;
 }

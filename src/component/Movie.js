@@ -20,9 +20,11 @@ export class Movie extends Component {
     super(props);
     this.state = {
       results: [],
+      genre_ids:[],
       loading: false,
       page: 1,
       total_results: 0,
+      
     };
   }
 
@@ -30,14 +32,17 @@ export class Movie extends Component {
     let url = `https://api.themoviedb.org/3/movie/top_rated?api_key=8715e8842217df4604773f0cef2fca91&language=en-US&page=1`;
     let data = await fetch(url);
     let parsedata = await data.json();
-
+    console.log(parsedata);
     this.setState({
       results: parsedata.results,
+      genre_ids: parsedata.genre_ids,
       total_results: parsedata.total_results,
+      total_pages:parsedata.total_pages,
       loading: false,
     });
-    console.log(this.state.results);
   }
+  
+    
 
   render() {
     return (
@@ -46,13 +51,14 @@ export class Movie extends Component {
           <div className="row justify-content-center">
             {this.state.results.map((element) => {
               return (
-                <div className="col-md-10 cardSty" key={element.id}>
+                <div className="col-md-11 cardSty" key={element.id}>
                   <Movieitem
                     language={element.original_language}
                     vote_average={element.vote_average}
                     original_title={element.original_title}
                     title={element.title}
                     release_date={element.release_date}
+                    genres={element.genre_ids}
                     overview={element.overview}
                     imageUrl={element.poster_path}
                   />
@@ -60,7 +66,12 @@ export class Movie extends Component {
               );
             })}
           </div>
+          
         </div>
+        <div class="d-flex justify-content-between">
+            <button type="button" className="btn np">&laquo; Previous </button>
+            <button type="button" className="btn np">Next &raquo;</button>
+          </div>
       </>
     );
   }
