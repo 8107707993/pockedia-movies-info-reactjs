@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import "./Navbar.css";
-
+import "./MovieCard.css";
 
 export class Movieitem extends Component {
   // constructor() {
@@ -15,7 +14,7 @@ export class Movieitem extends Component {
   // };
   // fetchGenre() {
   //   fetch(
-      
+
   //    `https://api.themoviedb.org/3/genre/movie/list?&api_key=${this.apiKey}`,
   //   )
   //     .then(data => data.json())
@@ -44,11 +43,55 @@ export class Movieitem extends Component {
       imageUrl,
       language,
       genres,
-      
+      movie_id,
+      backdrop_path,
     } = this.props;
     return (
       <>
-        <div
+        <div className="container cardContainer">
+          <div className="card">
+            <div className="contents">
+              <img
+                src={`https://image.tmdb.org/t/p/w500` + imageUrl}
+                alt="img"
+                className="imgfluid  "
+              />
+              <p className="card-title  title-1 ">
+                <span className="cardThead">Movie Name : </span>
+                {original_title}
+              </p>
+              <p className="card-title title-2">
+                <span className="cardThead">As You Know :</span> {title}
+              </p>
+              <p className="card-text text1">
+                <span className="cardThead">IMDP Reting : </span>
+                {vote_average}.
+              </p>
+              <p className="card-text text-2">
+                <span className="cardThead">Release date : </span>
+                {release_date}.
+              </p>
+            </div>
+            <div className="hoverContent">
+              <p>
+                <span>Overview:- </span>
+                {overview}
+              </p>
+              <p>
+                <span>Language:- </span>
+                {language}
+              </p>
+              <img
+                src={`https://image.tmdb.org/t/p/w500` + backdrop_path}
+                alt="img"
+                className="imgfluid  "
+              />
+              <p>{genres}</p>
+            </div>
+          </div>
+        </div>
+        {/* <hr/> */}
+        {/* <div
           className="card  "
           style={{ position: "relative", overflow: "hidden" }}
         >
@@ -98,7 +141,7 @@ export class Movieitem extends Component {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </>
     );
   }

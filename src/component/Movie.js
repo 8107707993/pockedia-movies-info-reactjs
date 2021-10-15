@@ -47,7 +47,7 @@ export class Movie extends Component {
   render() {
     return (
       <>
-        <div className="container bg-secondary  my-4">
+        <div className="container container-bg  my-4">
           <div className="row justify-content-center">
             {this.state.results.map((element) => {
               return (
@@ -58,9 +58,11 @@ export class Movie extends Component {
                     original_title={element.original_title}
                     title={element.title}
                     release_date={element.release_date}
-                    genres={element.genre_ids}
+                    genres={[element.genre_ids,]}
                     overview={element.overview}
                     imageUrl={element.poster_path}
+                    movie_id={element.id}
+                    backdrop_path={element.backdrop_path}
                   />
                 </div>
               );
@@ -68,7 +70,7 @@ export class Movie extends Component {
           </div>
           
         </div>
-        <div class="d-flex justify-content-between">
+        <div className="d-flex justify-content-between">
             <button type="button" className="btn np">&laquo; Previous </button>
             <button type="button" className="btn np">Next &raquo;</button>
           </div>

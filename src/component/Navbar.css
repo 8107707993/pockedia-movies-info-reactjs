@@ -53,14 +53,14 @@ navbar-toggler-icon:focus {
   height: 300px;
   background-image: linear-gradient(
     to right,
-    rgba(180, 180, 180, 0.63),
-    rgba(187, 38, 201, 0.37),
-    rgba(170, 0, 133, 0.644),
-    rgb(167, 40, 199, 0.64),
-    rgb(167, 40, 199, 0.63)
+    rgb(0, 93, 152),
+    rgb(34, 123, 162),
+    
+    
+    rgb(25, 51, 90)
   );
 }
-
+ 
 .darky h1 {
   margin-top: 150px;
   text-align: center;
@@ -78,7 +78,7 @@ navbar-toggler-icon:focus {
   border-radius: 44%;
   border: none;
   width: auto;
-  background-color: rgba(187, 38, 201, 0.37);
+  background-color: rgb(25, 51, 90,0.3);
   padding: auto;
   color: #fff;
   box-shadow: 10px 10px 10px #000;
@@ -100,10 +100,14 @@ navbar-toggler-icon:focus {
   background-color: rgb(255, 255, 255);
   box-shadow: 10px 10px 10px #000;
 }
+.searchform::placeholder {
+  color: red;
+  opacity: 1; /* Firefox */
+}
 
 /* Movie item css */
 
-.imgSize {
+/* .imgSize {
   width: 150px;
   height: 200px;
   box-shadow: 5px 5px 5px;
@@ -111,18 +115,22 @@ navbar-toggler-icon:focus {
   border-radius: 20%;
 }
 .cardSty {
-  margin: 15px;
+  margin: 15px; */
   /* border: 1px solid rgb(165, 164, 164); */
   /* background-color: rgba(214, 214, 214, 0.63); */
+/* }
+.container-bg{
+  background-color:rgb(25, 51, 90);
 }
 .cardThead {
   font-weight: 800;
 }
 .card {
-  background-color: rgba(214, 214, 214, 0.63);
+  background-color: rgba(255, 255, 255, 0.2);
   box-shadow: 10px 10px 10px #000;
-  color: #fff;
-}
+  color: #fff; */
+  /* border-top: 7px solid; */
+/* }
 .movie-overviews {
   position: absolute;
   bottom: 0;
@@ -137,7 +145,7 @@ navbar-toggler-icon:focus {
 }
 .card:hover .movie-overviews {
   transform: translateX(0%);
-}
+} */
 .np{
   background-color: #fff;
   color: #000;
@@ -156,3 +164,12 @@ navbar-toggler-icon:focus {
   border: 1px solid rgb(0, 0, 0);
   border-radius:0% 20%;
 }
+/* hr{
+  border: 7px solid  rgb(25, 51, 90,0);
+  margin-bottom: 0px;
+  border-radius: 50px 50px 0px 0px;
+  width: 101%;
+  margin: 0px 1px;
+} */
+
+
