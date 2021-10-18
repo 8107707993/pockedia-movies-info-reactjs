@@ -1,7 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
+import Title from 'react-vanilla-tilt'
 import "./MovieCard.css";
 
-export class Movieitem extends Component {
+const Movieitem = (props)=> {
   // constructor() {
   //   super();
   //   this.apiKey = '8715e8842217df4604773f0cef2fca91';
@@ -33,7 +34,7 @@ export class Movieitem extends Component {
   //       this.setState({gen: genreRow});
   //     });
   //   }
-  render() {
+
     let {
       title,
       original_title,
@@ -43,12 +44,14 @@ export class Movieitem extends Component {
       imageUrl,
       language,
       genres,
-      movie_id,
+      // movie_id,
       backdrop_path,
-    } = this.props;
+    } =props;
     return (
       <>
         <div className="container cardContainer">
+        <Title  style={{backgroundColor:"rgba(255, 255, 255, 0)", padding: "0px", borderRadius: "15px"}}>
+
           <div className="card">
             <div className="contents">
               <img
@@ -89,6 +92,7 @@ export class Movieitem extends Component {
               <p>{genres}</p>
             </div>
           </div>
+          </Title>
         </div>
         {/* <hr/> */}
         {/* <div
@@ -144,7 +148,7 @@ export class Movieitem extends Component {
         </div> */}
       </>
     );
-  }
+  
 }
 
 export default Movieitem;

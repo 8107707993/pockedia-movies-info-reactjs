@@ -1,9 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './CompoStyle.css';
 
-export class GenreSlide extends Component {
+const GenreSlide = ()=> {
    
-    render() {
+   
+
         const slideL = function(){
             document.getElementById('btnContainer').scrollLeft -= 800;
         }
@@ -45,7 +46,7 @@ export class GenreSlide extends Component {
                 
             </>
         )
-    }
+    
 }
 
 export default GenreSlide

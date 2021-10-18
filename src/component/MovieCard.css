@@ -84,5 +84,6 @@
     cursor: pointer;
 }
 .cardContainer .card:hover .contents{
-    opacity: 0;
+ 
+  opacity: 0;
 }

@@ -1,8 +1,29 @@
-import React, { Component } from "react";
+import React from "react";
 import "./Navbar.css";
 
-export class Navbar extends Component {
-  render() {
+const Navbar = ()=> {
+  // window.onscroll = function () {
+  //   myFunction();
+  // };
+
+  // let header = document.getElementById("header");
+  // // let header = document.getElementById("header");
+  // // let darky = document.getElementById("darky");
+  // // let formcont = document.getElementById("formcont");
+  // // let sticky = header.offsetTop;
+
+  // function myFunction() {
+  //   if (window.pageYOffset >= 80) {
+  //     // header.classList.add("sticky");
+  //     // darky.classList.add("darkySticky");
+  //     // formcont.classList.add("formcontSticky");
+  //   } else {
+  //     // header.classList.remove("sticky");
+  //     // darky.classList.remove("darkySticky");
+  //     // formcont.classList.remove("formcontSticky");
+  //   }
+  // }
+
     return (
       <>
         <div className="container position-sticky z-index-sticky top-0">
@@ -63,7 +84,7 @@ export class Navbar extends Component {
         </div>
       </>
     );
-  }
+  
 }
 
 export default Navbar;
