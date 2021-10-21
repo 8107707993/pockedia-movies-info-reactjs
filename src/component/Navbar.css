@@ -1,6 +1,12 @@
+#container{
+  z-index: 1;
+}
+
 .nav-sty {
   background-color: rgb(255, 255, 255, 0.8);
   border-radius: 20px;
+  box-shadow: 20px 20px 50px #00000073;
+  backdrop-filter: blur(1px);
 }
 .navbar-toggler {
   border: 0;
@@ -49,103 +55,12 @@ navbar-toggler-icon:focus {
   transform: rotate(0);
 }
 
-.header-gradient {
-  height: 300px;
-  background-image: linear-gradient(
-    to right,
-    rgb(0, 93, 152),
-    rgb(34, 123, 162),
-    
-    
-    rgb(25, 51, 90)
-  );
-}
  
 .darky h1 {
   margin-top: 150px;
   text-align: center;
 }
-.form-control {
-  width: 350px;
-  border-radius: 30px;
-}
-.formcont {
-  margin-top: 30px;
-  width: auto;
-}
 
-.searchbtn {
-  border-radius: 44%;
-  border: none;
-  width: auto;
-  background-color: rgb(25, 51, 90,0.3);
-  padding: auto;
-  color: #fff;
-  box-shadow: 10px 10px 10px #000;
-}
-.searchbtn:hover {
-  background-color: rgba(255, 255, 255, 1);
-  box-shadow: 10px 10px 10px #000;
-  text-shadow: 10px;
-  color: rgb(0, 0, 0);
-}
-.searchform {
-  box-shadow: 10px 10px 10px #000;
-  background-color: rgb(255, 255, 255, 0);
-  color: #fff;
-}
-.searchform:hover,
-.searchform:focus,
-.searchform:active {
-  background-color: rgb(255, 255, 255);
-  box-shadow: 10px 10px 10px #000;
-}
-.searchform::placeholder {
-  color: red;
-  opacity: 1; /* Firefox */
-}
-
-/* Movie item css */
-
-/* .imgSize {
-  width: 150px;
-  height: 200px;
-  box-shadow: 5px 5px 5px;
-  margin: 15px 5px;
-  border-radius: 20%;
-}
-.cardSty {
-  margin: 15px; */
-  /* border: 1px solid rgb(165, 164, 164); */
-  /* background-color: rgba(214, 214, 214, 0.63); */
-/* }
-.container-bg{
-  background-color:rgb(25, 51, 90);
-}
-.cardThead {
-  font-weight: 800;
-}
-.card {
-  background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 10px 10px 10px #000;
-  color: #fff; */
-  /* border-top: 7px solid; */
-/* }
-.movie-overviews {
-  position: absolute;
-  bottom: 0;
-  left: 26%;
-  right: 0;
-  color: black;
-  background-color: rgba(214, 214, 214, 1);
-  transform: translateX(100%);
-  transition: transform 0.1s ease-in-out;
-  overflow: auto;
-  max-height: 100%;
-}
-.card:hover .movie-overviews {
-  transform: translateX(0%);
-} */
 .np{
   background-color: #fff;
   color: #000;
@@ -181,4 +96,103 @@ navbar-toggler-icon:focus {
   overflow: hidden;
 }
 
+/* dropdown css */
 
+.dropdown-containt{
+  padding-left: 0px;
+  display: none;
+ 
+}
+.dropdown-containt .drop-item{
+  text-decoration: none;
+  list-style: none;
+  padding: 10px 15px;
+  
+  
+}
+
+.dropdown-containt .drop-item .drop-link{
+ color:rgb(0, 0, 0);
+ text-decoration: none;
+
+}
+
+.dropdown-containt .drop-item:hover{
+  background-color: rgba(25, 51, 90, 0.205);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+
+}
+
+.dropdown:hover .dropdown-containt{
+  display:block;
+  position: absolute;
+  background-color: #ffffff00;
+  min-width: 160px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0);
+  z-index: 1;
+  border-top: 1px solid rgba(0, 0, 0, 0.7);
+  border-left: 1px solid rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+
+}
+
+/* Search bar css */
+.search-container{
+  background: #fff;
+  margin-top: 10px;
+  height: 30px;
+  border-radius: 30px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.8s;
+  /*box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+  inset -7px -7px 10px 0px rgba(0,0,0,.1),
+ 7px 7px 20px 0px rgba(0,0,0,.1),
+ 4px 4px 5px 0px rgba(0,0,0,.1);
+ text-shadow:  0px 0px 6px rgba(255,255,255,.3),
+            -4px -4px 6px rgba(116, 125, 136, .2);
+text-shadow: 2px 2px 3px rgba(255,255,255,0.5);*/
+box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+            -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+  inset -4px -4px 6px 0 rgba(255,255,255,.2),
+  inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+}
+
+.search-container:hover > .search-input{
+  width: 80px;
+}
+
+.search-container .search-input{
+  background: transparent;
+  border: none;
+  outline:none;
+  width: 0px;
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.8s;
+
+}
+
+.search-container .search-btn .fas{
+  color: #5cbdbb;
+}
+
+@keyframes hoverShake {
+0% {transform: skew(0deg,0deg);}
+25% {transform: skew(5deg, 5deg);}
+75% {transform: skew(-5deg, -5deg);}
+100% {transform: skew(0deg,0deg);}
+}
+
+.search-container:hover{
+animation: hoverShake 0.15s linear 3;
+}
+
+@media screen and(max-width:600px) {
+    .search-container{
+      max-width: 200px;
+    }  
+}

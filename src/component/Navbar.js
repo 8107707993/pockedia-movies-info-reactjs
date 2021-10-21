@@ -1,35 +1,16 @@
 import React from "react";
+// import { Link } from "react-router-dom";
 import "./Navbar.css";
+import SearchBar from "./SearchBar";
 
 const Navbar = ()=> {
-  // window.onscroll = function () {
-  //   myFunction();
-  // };
-
-  // let header = document.getElementById("header");
-  // // let header = document.getElementById("header");
-  // // let darky = document.getElementById("darky");
-  // // let formcont = document.getElementById("formcont");
-  // // let sticky = header.offsetTop;
-
-  // function myFunction() {
-  //   if (window.pageYOffset >= 80) {
-  //     // header.classList.add("sticky");
-  //     // darky.classList.add("darkySticky");
-  //     // formcont.classList.add("formcontSticky");
-  //   } else {
-  //     // header.classList.remove("sticky");
-  //     // darky.classList.remove("darkySticky");
-  //     // formcont.classList.remove("formcontSticky");
-  //   }
-  // }
-
+  
     return (
       <>
-        <div className="container position-sticky z-index-sticky top-0">
+        <div id="container" className="container position-sticky  top-0">
           <div className="row">
             <div className="col-12">
-              <nav className="navbar navbar-expand-lg navbar-light  blur blur-rounded top-0 z-index-fixed shadow nav-sty position-absolute my-3 py-2 start-0 end-0 mx-4">
+              <nav className="navbar navbar-expand-lg navbar-light  blur blur-rounded top-0 z-index-fixed  nav-sty position-absolute my-3 py-2 start-0 end-0 mx-4">
                 <div className="container-fluid px-0">
                   <a
                     className="navbar-brand font-weight-bolder ps-1 ms-sm-3"
@@ -39,7 +20,7 @@ const Navbar = ()=> {
                     data-placement="bottom"
                     target="_blank"
                   >
-                    Soft UI PRO
+                    Pockedia Movie Info
                   </a>
                   <button
                     className="navbar-toggler collapsed border-0 shadow-none ms-md-2"
@@ -61,19 +42,35 @@ const Navbar = ()=> {
                     <ul className="navbar-nav navbar-nav-hover mx-auto">
                       <li className="nav-item  mx-2">
                         <a href="/" role="button" className="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center">
-                          Page
+                          Home
                         </a>
                       </li>
                       <li className="nav-item  mx-2">
                         <a href="/" role="button" className="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center">
-                          Account
+                          About Us
                         </a>
                       </li>
                       <li className="nav-item  mx-2">
                         <a href="/" role="button" className="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center">
-                          Blocks
+                          Blog
                         </a>
                       </li>
+                      <li className="nav-item dropdown mx-2">
+                        <a href="/" role="button" className="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center">
+                          Types
+                        </a>
+                        <ul className="dropdown-containt" >
+                          <li className="drop-item"><a className="drop-link" href="/">Upcoming</a></li>
+                          <li className="drop-item"><a className="drop-link" href="/">Popular</a></li>
+                          <li className="drop-item"><a className="drop-link" href="/">Top_rated</a></li>
+                        </ul>
+                      </li>
+                      <li className="nav-item  mx-2">
+                        <a href="/" role="button" className="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center">
+                          Filter
+                        </a>
+                      </li>
+                      <SearchBar/>
                     </ul>
                   </div>
                 </div>

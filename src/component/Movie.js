@@ -1,55 +1,47 @@
-import React, { Component } from "react";
-
+import React, { useEffect , useState } from "react";
 import Movieitem from "./Movieitem";
-// import { useEffect } from "react";
-// import axios from "axios";
-export class Movie extends Component {
-  // static defaultProps = {
-  //   region: "in",
-  //   pageSize: 9,
-  //   category: "general",
-  // };
+import axios from "axios";
+import "./MovieCard.css";
+import {CircleArrow as ScrollUpButton} from "react-scroll-up-button";
 
-  // static propType = {
-  //   country: PropTypes.string,
-  //   pageSize: PropTypes.number,
-  //   category: PropTypes.string,
-  // };
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      results: [],
-      genre_ids:[],
-      loading: false,
-      page: 1,
-      total_results: 0,
-      
-    };
-  }
+const Movie = (props)=> {
 
-  async componentDidMount() {
-    let url = `https://api.themoviedb.org/3/movie/top_rated?api_key=8715e8842217df4604773f0cef2fca91&language=en-US&page=1`;
-    let data = await fetch(url);
-    let parsedata = await data.json();
-    console.log(parsedata);
-    this.setState({
-      results: parsedata.results,
-      genre_ids: parsedata.genre_ids,
-      total_results: parsedata.total_results,
-      total_pages:parsedata.total_pages,
-      loading: false,
-    });
-  }
-  
+  const [movieResults, setMovieResults] = useState()
+  const [pageNo, setPageNo] = useState(1)
+  const [totalPage, setTotalPage] = useState()
+  const apiKey = props.apiKey
+  useEffect(() => {
+    axios
+    .get(`https://api.themoviedb.org/3/movie/upcoming?api_key=${apiKey}&language=en-US&page=${pageNo}`)
+    .then(({data}) => {setMovieResults(data.results);setTotalPage(data.total_pages);console.log(data)} )
+    .catch((err)=>console.log(err))
     
+  }, [pageNo,apiKey])
+  
+  const handelNextClick = async () => {
+    setPageNo(pageNo +1) 
+  }; 
+   const handelPrevClick = async ()=>{
+      setPageNo(pageNo - 1)
+   }
 
-  render() {
+  
     return (
-      <>
+      
+      <> 
+           <ScrollUpButton
+          EasingType="easeInQuart"
+          ShowAtPosition={50}
+          AnimationDuration={40}
+        />  
+      <div className="pageLableBox">
+      <p className="pageLable">Page No :{pageNo}</p>
+      </div>
         <div className="container container-bg  my-4">
+          
           <div className="row justify-content-center">
-            {this.state.results.map((element) => {
+            {movieResults && movieResults.map((element) => {
               return (
                 <div className="col-md-11 cardSty" key={element.id}>
                   <Movieitem
@@ -71,12 +63,25 @@ export class Movie extends Component {
           
         </div>
         <div className="d-flex justify-content-between">
-            <button type="button" className="btn np">&laquo; Previous </button>
-            <button type="button" className="btn np">Next &raquo;</button>
+            <button disabled={pageNo <=1} type="button" onClick={handelPrevClick} className="btn np">&laquo; Previous </button>
+            
+            
+            <button disabled={pageNo >= totalPage} type="button" onClick={handelNextClick} className="btn np">Next &raquo;</button>
           </div>
       </>
     );
-  }
+  
 }
+ // static defaultProps = {
+  //   // region: "in",
+  //   pageSize: 10,
+  //   // category: "general",
+  // };
+
+  // static propType = {
+  //   // country: PropTypes.string,
+  //   pageSize: PropTypes.number,
+  //   // category: PropTypes.string,
+  // };
 
 export default Movie;

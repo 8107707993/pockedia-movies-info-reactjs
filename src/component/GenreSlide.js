@@ -15,7 +15,7 @@ const GenreSlide = ()=> {
             <>
             
             
-                <div className="container genreBtnGroup my-4">
+                <div className="container genreBtnGroup ">
                
                 <div id="btnContainer" className="container btnContainer text-light d-flex">
                     <div className="genreBtn">Action</div>

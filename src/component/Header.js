@@ -67,26 +67,16 @@ const Header = () => {
         <Navbar />
         <div id="darky" className="container darky">
           <h1>
-            This pen is
+            You can Search Movie By
             <span
               className="txt-rotate"
               data-period="2000"
-              data-rotate='[ " nerdy.", " simple.", " pure JS.", " pretty.", " fun!" ]'
+              data-rotate='[ " Category.", " Name.", "id "]'
             ></span>
           </h1>
         </div>
         <div id="formcont" className="d-flex justify-content-center container formcont">
-          <form className="d-flex  bg-transparent">
-            <input
-              className="form-control searchform me-2 "
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button className="btn searchbtn " type="submit">
-              Search
-            </button>
-          </form>
+          
         </div>
       </div>
     </>

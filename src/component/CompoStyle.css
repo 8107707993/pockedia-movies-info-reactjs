@@ -1,6 +1,7 @@
 .genreBtnGroup{
     padding: 0px;
     overflow-x: auto;
+    margin-top: 25px;
 }
 .btnContainer{
     display: flex;
