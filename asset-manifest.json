@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/pockedia_movies_inforeactjs/static/css/main.83f8049c.chunk.css",
-    "main.js": "/pockedia_movies_inforeactjs/static/js/main.a741162b.chunk.js",
-    "main.js.map": "/pockedia_movies_inforeactjs/static/js/main.a741162b.chunk.js.map",
-    "runtime-main.js": "/pockedia_movies_inforeactjs/static/js/runtime-main.e84eea28.js",
-    "runtime-main.js.map": "/pockedia_movies_inforeactjs/static/js/runtime-main.e84eea28.js.map",
-    "static/js/2.c7e7f5b6.chunk.js": "/pockedia_movies_inforeactjs/static/js/2.c7e7f5b6.chunk.js",
-    "static/js/2.c7e7f5b6.chunk.js.map": "/pockedia_movies_inforeactjs/static/js/2.c7e7f5b6.chunk.js.map",
-    "static/js/3.7e85c5ee.chunk.js": "/pockedia_movies_inforeactjs/static/js/3.7e85c5ee.chunk.js",
-    "static/js/3.7e85c5ee.chunk.js.map": "/pockedia_movies_inforeactjs/static/js/3.7e85c5ee.chunk.js.map",
+    "main.css": "/pockedia_movies_inforeactjs/static/css/main.45465919.chunk.css",
+    "main.js": "/pockedia_movies_inforeactjs/static/js/main.7f50bfaa.chunk.js",
+    "main.js.map": "/pockedia_movies_inforeactjs/static/js/main.7f50bfaa.chunk.js.map",
+    "runtime-main.js": "/pockedia_movies_inforeactjs/static/js/runtime-main.bcf13a40.js",
+    "runtime-main.js.map": "/pockedia_movies_inforeactjs/static/js/runtime-main.bcf13a40.js.map",
+    "static/js/2.3452e3fe.chunk.js": "/pockedia_movies_inforeactjs/static/js/2.3452e3fe.chunk.js",
+    "static/js/2.3452e3fe.chunk.js.map": "/pockedia_movies_inforeactjs/static/js/2.3452e3fe.chunk.js.map",
+    "static/js/3.d9e94181.chunk.js": "/pockedia_movies_inforeactjs/static/js/3.d9e94181.chunk.js",
+    "static/js/3.d9e94181.chunk.js.map": "/pockedia_movies_inforeactjs/static/js/3.d9e94181.chunk.js.map",
     "index.html": "/pockedia_movies_inforeactjs/index.html",
-    "static/css/main.83f8049c.chunk.css.map": "/pockedia_movies_inforeactjs/static/css/main.83f8049c.chunk.css.map",
-    "static/js/2.c7e7f5b6.chunk.js.LICENSE.txt": "/pockedia_movies_inforeactjs/static/js/2.c7e7f5b6.chunk.js.LICENSE.txt"
+    "static/css/main.45465919.chunk.css.map": "/pockedia_movies_inforeactjs/static/css/main.45465919.chunk.css.map",
+    "static/js/2.3452e3fe.chunk.js.LICENSE.txt": "/pockedia_movies_inforeactjs/static/js/2.3452e3fe.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.e84eea28.js",
-    "static/js/2.c7e7f5b6.chunk.js",
-    "static/css/main.83f8049c.chunk.css",
-    "static/js/main.a741162b.chunk.js"
+    "static/js/runtime-main.bcf13a40.js",
+    "static/js/2.3452e3fe.chunk.js",
+    "static/css/main.45465919.chunk.css",
+    "static/js/main.7f50bfaa.chunk.js"
   ]
 }
