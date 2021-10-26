@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/pockedia_movies_inforeactjs/static/css/main.45465919.chunk.css",
-    "main.js": "/pockedia_movies_inforeactjs/static/js/main.7f50bfaa.chunk.js",
-    "main.js.map": "/pockedia_movies_inforeactjs/static/js/main.7f50bfaa.chunk.js.map",
-    "runtime-main.js": "/pockedia_movies_inforeactjs/static/js/runtime-main.bcf13a40.js",
-    "runtime-main.js.map": "/pockedia_movies_inforeactjs/static/js/runtime-main.bcf13a40.js.map",
-    "static/js/2.3452e3fe.chunk.js": "/pockedia_movies_inforeactjs/static/js/2.3452e3fe.chunk.js",
-    "static/js/2.3452e3fe.chunk.js.map": "/pockedia_movies_inforeactjs/static/js/2.3452e3fe.chunk.js.map",
-    "static/js/3.d9e94181.chunk.js": "/pockedia_movies_inforeactjs/static/js/3.d9e94181.chunk.js",
-    "static/js/3.d9e94181.chunk.js.map": "/pockedia_movies_inforeactjs/static/js/3.d9e94181.chunk.js.map",
+    "main.js": "/pockedia_movies_inforeactjs/static/js/main.e3d67635.chunk.js",
+    "main.js.map": "/pockedia_movies_inforeactjs/static/js/main.e3d67635.chunk.js.map",
+    "runtime-main.js": "/pockedia_movies_inforeactjs/static/js/runtime-main.faf8fee7.js",
+    "runtime-main.js.map": "/pockedia_movies_inforeactjs/static/js/runtime-main.faf8fee7.js.map",
+    "static/js/2.f0b88d4f.chunk.js": "/pockedia_movies_inforeactjs/static/js/2.f0b88d4f.chunk.js",
+    "static/js/2.f0b88d4f.chunk.js.map": "/pockedia_movies_inforeactjs/static/js/2.f0b88d4f.chunk.js.map",
+    "static/js/3.eff89f92.chunk.js": "/pockedia_movies_inforeactjs/static/js/3.eff89f92.chunk.js",
+    "static/js/3.eff89f92.chunk.js.map": "/pockedia_movies_inforeactjs/static/js/3.eff89f92.chunk.js.map",
     "index.html": "/pockedia_movies_inforeactjs/index.html",
     "static/css/main.45465919.chunk.css.map": "/pockedia_movies_inforeactjs/static/css/main.45465919.chunk.css.map",
-    "static/js/2.3452e3fe.chunk.js.LICENSE.txt": "/pockedia_movies_inforeactjs/static/js/2.3452e3fe.chunk.js.LICENSE.txt"
+    "static/js/2.f0b88d4f.chunk.js.LICENSE.txt": "/pockedia_movies_inforeactjs/static/js/2.f0b88d4f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.bcf13a40.js",
-    "static/js/2.3452e3fe.chunk.js",
+    "static/js/runtime-main.faf8fee7.js",
+    "static/js/2.f0b88d4f.chunk.js",
     "static/css/main.45465919.chunk.css",
-    "static/js/main.7f50bfaa.chunk.js"
+    "static/js/main.e3d67635.chunk.js"
   ]
 }
