@@ -1,5 +1,4 @@
 import React from "react";
-// import { Link } from "react-router-dom";
 import "./Navbar.css";
 import SearchBar from "./SearchBar";
 
@@ -42,17 +41,17 @@ const Navbar = ()=> {
                     <ul className="navbar-nav navbar-nav-hover mx-auto">
                       <li className="nav-item  mx-2">
                         <a href="/" role="button" className="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center">
-                          Home
+                        Trending
                         </a>
                       </li>
                       <li className="nav-item  mx-2">
                         <a href="/" role="button" className="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center">
-                          About Us
+                        Movies
                         </a>
                       </li>
                       <li className="nav-item  mx-2">
                         <a href="/" role="button" className="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center">
-                          Blog
+                        Tv Series
                         </a>
                       </li>
                       <li className="nav-item dropdown mx-2">
@@ -65,11 +64,7 @@ const Navbar = ()=> {
                           <li className="drop-item"><a className="drop-link" href="/">Top_rated</a></li>
                         </ul>
                       </li>
-                      <li className="nav-item  mx-2">
-                        <a href="/" role="button" className="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center">
-                          Filter
-                        </a>
-                      </li>
+                    
                       <SearchBar/>
                     </ul>
                   </div>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e306b1be-976c-4c03-ac7d-8e824a0d6880" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/CompoStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/CompoStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/GenreSlide.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/GenreSlide.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Movie.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Movie.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/MovieCard.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/MovieCard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Movieitem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Movieitem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Navbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Navbar.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="202IDesiHWomhmZ2xftQcuthoLK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e306b1be-976c-4c03-ac7d-8e824a0d6880" name="Default Changelist" comment="" />
+      <created>1635236142690</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1635236142690</updated>
+    </task>
+    <servers />
+  </component>
+</project>

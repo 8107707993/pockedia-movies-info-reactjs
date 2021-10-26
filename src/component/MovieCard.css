@@ -9,18 +9,21 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-.cardContainer {
+::-webkit-scrollbar{
+  display: none;
+}
+.cardSty {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   max-width: 100%;
   flex-wrap: wrap;
-  background-color: #ffffff00;
+
 }
-.cardContainer .card {
+.cardSty .card {
   position: relative;
-  width: 50vw;
+  width: 250PX;
   height: 500px;
   margin: 20px;
   box-shadow: 20px 20px 50px rgb(0, 0, 0, 0.5);
@@ -34,30 +37,30 @@
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(5px);
 }
-.cardContainer .card .contents {
+.cardSty .card .contents {
   padding: 10px;
   text-align: center;
   transition: 0.5s;
   color: rgba(255, 255, 255, 0.5);
 }
-.cardContainer .card .contents .imgfluid {
+.cardSty .card .contents .imgfluid {
   width: 150px;
   height: 150px;
   border-radius: 50%;
 }
-.cardContainer .card .contents .title-1 {
+.cardSty .card .contents .title-1 {
   color: #fff;
   margin-top: 20px;
   font-weight: 600;
   font-family: "PT Serif", serif;
   font-size: 20px;
 }
-.cardContainer .card .contents .title-2 {
+.cardSty .card .contents .title-2 {
   color: rgb(255, 255, 255, 0.9);
   font-weight: 500;
   font-size: 18px;
 }
-.cardContainer .card .hoverContent {
+.cardSty .card .hoverContent {
   position: absolute;
   left: 10px;
   bottom: 0px;
@@ -70,26 +73,26 @@
   font-weight: 400;
   top: 20px;
 }
-.cardContainer .card .hoverContent p span{
+.cardSty .card .hoverContent p span{
     font-weight: 900;
     font-size: 24px;
 }
-.cardContainer .card .hoverContent .imgfluid{
-  width: 80%;
+.cardSty .card .hoverContent .imgfluid{
   height: auto;
-  padding: 30px 20px;
+  width: 200PX;
+  
 }
-.cardContainer .card:hover .hoverContent{
+.cardSty .card:hover .hoverContent{
     transform: translateY(0%);
     transition: transform 0.5s ease-in-out;
     cursor: pointer;
 }
-.cardContainer .card:hover .contents{
+.cardSty .card:hover .contents{
  
   opacity: 0;
 }
 @media screen and (max-width: 600px) {
-  .cardContainer .card {
+  .cardSty .card {
     width: 80vw;
   }
   
@@ -125,4 +128,13 @@ margin-top: 125px;
     margin-right: -34px;
 
   }
+
+}
+
+
+/* scrollUP css */
+
+.scrollUP{
+  z-index: 1;
+  position: relative;
 }

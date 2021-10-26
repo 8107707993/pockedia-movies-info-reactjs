@@ -1,52 +1,65 @@
-import React from 'react'
-import './CompoStyle.css';
+import axios from "axios";
+import React, { useEffect } from "react";
+import "./GenreSlide.css";
 
-const GenreSlide = ()=> {
-   
-   
+const GenreSlide = ({
+  genress,
+  setGenress,
+  selectedGenres,
+  setSelectedGenres,
+  setPageNo,
+  type,
+  baseurl,
+  movieResults
+}) => {
+  
 
-        const slideL = function(){
-            document.getElementById('btnContainer').scrollLeft -= 800;
-        }
-        const slideR= function(){
-            document.getElementById('btnContainer').scrollLeft += 800;
-        }
-        return (
-            <>
-            
-            
-                <div className="container genreBtnGroup ">
-               
-                <div id="btnContainer" className="container btnContainer text-light d-flex">
-                    <div className="genreBtn">Action</div>
-                    <div className="genreBtn">Adventure</div>
-                    <div className="genreBtn">Animation</div>
-                    <div className="genreBtn">Comedy</div>
-                    <div className="genreBtn">Crime</div>
-                    <div className="genreBtn">Documentary</div>
-                    <div className="genreBtn">Drama</div>
-                    <div className="genreBtn">Family</div>
-                    <div className="genreBtn">Fantasy</div>
-                    <div className="genreBtn">History</div>
-                    <div className="genreBtn">Horror</div>
-                    <div className="genreBtn">Music</div>
-                    <div className="genreBtn">Mystery</div>
-                    <div className="genreBtn">Romance</div>
-                    <div className="genreBtn">Scifi</div>
-                    <div className="genreBtn">TvMovie</div>
-                    <div className="genreBtn">Thriller</div>
-                    <div className="genreBtn">War</div>
-                    <div className="genreBtn">Western</div>
-                    </div>
-                    <div className="lrBtn d-flex justify-content-between position-sticky ">
-                        <button type="button" onClick={slideL} id="btnLeft" className="btn  lbtn">&laquo;</button>
-                        <button type="button" onClick={slideR} id="btnRight" className="btn rbtn">&raquo;</button>
-                        </div>
-                </div>                
-                
-            </>
-        )
-    
-}
+ async function updataData () {
+    try {
+        await axios
+        .get(`${baseurl}genre/${type}/list?api_key=8715e8842217df4604773f0cef2fca91&language=en-US`)
+        .then(( {data}) => {
+          setGenress(data.genres);
+          // setTotalPage(data.total_pages);
+          console.log(data );
+        })
+    } catch (err) {
+        // Handle Error Here
+        console.error(err);
+    }
+};
+  
+  useEffect(() => {
+   updataData();
 
-export default GenreSlide
+   return ()=>{
+     setGenress({});
+   }
+   // eslint-disable-next-line
+  }, []);
+
+  const hendeleAdd =(genre) =>{
+   setSelectedGenres([...selectedGenres,genre]);
+   setGenress(genress.filter((g)=> g.id !== genre.id));
+   setPageNo(1);
+  }
+  const hendeleRemove =(genre)=>{
+    setSelectedGenres(selectedGenres.filter((selected)=> selected.id !== genre.id));
+    setGenress([...genress,genre]);
+    setPageNo(1);
+  }
+  return (
+    <>
+      <div className="chip">
+      {movieResults && selectedGenres && selectedGenres.map((genre)=>(
+          <div className="name" style={{backgroundColor:"rgb(253, 173, 0)"}} onClick={() => hendeleRemove(genre)} key={genre.id}>{genre.name} </div>
+        ))}
+        {movieResults && genress.map((genre)=>(
+          <div className="name" onClick={() => hendeleAdd(genre)} key={genre.id}>{genre.name} </div>
+        ))}
+      </div>
+    </>
+  );
+};
+
+export default GenreSlide;

@@ -49,7 +49,7 @@ const Movieitem = (props)=> {
     } =props;
     return (
       <>
-        <div className="container cardContainer">
+        
         <Title  style={{backgroundColor:"rgba(255, 255, 255, 0)", padding: "0px", borderRadius: "15px"}}>
 
           <div className="card">
@@ -70,7 +70,7 @@ const Movieitem = (props)=> {
                 <span className="cardThead">IMDP Reting : </span>
                 {vote_average}.
               </p>
-              <p className="card-text text-2">
+              <p className="card-text text2">
                 <span className="cardThead">Release date : </span>
                 {release_date}.
               </p>
@@ -93,7 +93,7 @@ const Movieitem = (props)=> {
             </div>
           </div>
           </Title>
-        </div>
+        
         {/* <hr/> */}
         {/* <div
           className="card  "
