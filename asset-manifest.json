@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/pockedia_movies_inforeactjs/static/css/main.a02c9411.chunk.css",
-    "main.js": "/pockedia_movies_inforeactjs/static/js/main.68de0aa3.chunk.js",
-    "main.js.map": "/pockedia_movies_inforeactjs/static/js/main.68de0aa3.chunk.js.map",
+    "main.css": "/pockedia_movies_inforeactjs/static/css/main.33d70669.chunk.css",
+    "main.js": "/pockedia_movies_inforeactjs/static/js/main.42654e9d.chunk.js",
+    "main.js.map": "/pockedia_movies_inforeactjs/static/js/main.42654e9d.chunk.js.map",
     "runtime-main.js": "/pockedia_movies_inforeactjs/static/js/runtime-main.6315b612.js",
     "runtime-main.js.map": "/pockedia_movies_inforeactjs/static/js/runtime-main.6315b612.js.map",
-    "static/js/2.2a8e8e04.chunk.js": "/pockedia_movies_inforeactjs/static/js/2.2a8e8e04.chunk.js",
-    "static/js/2.2a8e8e04.chunk.js.map": "/pockedia_movies_inforeactjs/static/js/2.2a8e8e04.chunk.js.map",
+    "static/js/2.a1d325b0.chunk.js": "/pockedia_movies_inforeactjs/static/js/2.a1d325b0.chunk.js",
+    "static/js/2.a1d325b0.chunk.js.map": "/pockedia_movies_inforeactjs/static/js/2.a1d325b0.chunk.js.map",
     "static/js/3.a0ccbb2f.chunk.js": "/pockedia_movies_inforeactjs/static/js/3.a0ccbb2f.chunk.js",
     "static/js/3.a0ccbb2f.chunk.js.map": "/pockedia_movies_inforeactjs/static/js/3.a0ccbb2f.chunk.js.map",
     "index.html": "/pockedia_movies_inforeactjs/index.html",
-    "static/css/main.a02c9411.chunk.css.map": "/pockedia_movies_inforeactjs/static/css/main.a02c9411.chunk.css.map",
-    "static/js/2.2a8e8e04.chunk.js.LICENSE.txt": "/pockedia_movies_inforeactjs/static/js/2.2a8e8e04.chunk.js.LICENSE.txt",
-    "static/media/NoPoster.4c38d08f.gif": "/pockedia_movies_inforeactjs/static/media/NoPoster.4c38d08f.gif"
+    "static/css/main.33d70669.chunk.css.map": "/pockedia_movies_inforeactjs/static/css/main.33d70669.chunk.css.map",
+    "static/js/2.a1d325b0.chunk.js.LICENSE.txt": "/pockedia_movies_inforeactjs/static/js/2.a1d325b0.chunk.js.LICENSE.txt",
+    "static/media/icons8-search.2affdb7a.gif": "/pockedia_movies_inforeactjs/static/media/icons8-search.2affdb7a.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.6315b612.js",
-    "static/js/2.2a8e8e04.chunk.js",
-    "static/css/main.a02c9411.chunk.css",
-    "static/js/main.68de0aa3.chunk.js"
+    "static/js/2.a1d325b0.chunk.js",
+    "static/css/main.33d70669.chunk.css",
+    "static/js/main.42654e9d.chunk.js"
   ]
 }
