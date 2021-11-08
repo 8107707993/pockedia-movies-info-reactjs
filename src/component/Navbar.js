@@ -1,7 +1,7 @@
 import React from "react";
-import "./Navbar.css";
-import SearchBar from "./SearchBar";
-
+import { Link } from "react-router-dom";
+import "./css/Navbar.css";
+import SearchBar from "./image/icons8-search.gif";
 const Navbar = ()=> {
   
     return (
@@ -11,16 +11,16 @@ const Navbar = ()=> {
             <div className="col-12">
               <nav className="navbar navbar-expand-lg navbar-light  blur blur-rounded top-0 z-index-fixed  nav-sty position-absolute my-3 py-2 start-0 end-0 mx-4">
                 <div className="container-fluid px-0">
-                  <a
+                  <Link
+                  to="/pockedia_movies_inforeactjs/"
                     className="navbar-brand font-weight-bolder ps-1 ms-sm-3"
-                    href=" https://demos.creative-tim.com/marketplace/soft-ui-design-system-pro/presentation.html "
                     rel="tooltip"
                     title="Designed and Coded by Creative Tim"
                     data-placement="bottom"
                     target="_blank"
                   >
                     Pockedia Movie Info
-                  </a>
+                  </Link>
                   <button
                     className="navbar-toggler collapsed border-0 shadow-none ms-md-2"
                     type="button"
@@ -40,32 +40,41 @@ const Navbar = ()=> {
                   >
                     <ul className="navbar-nav navbar-nav-hover mx-auto">
                       <li className="nav-item  mx-2">
-                        <a href="/" role="button" className="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center">
+                        <Link to="/pockedia_movies_inforeactjs/" role="button" className="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center">
                         Trending
-                        </a>
+                        </Link>
                       </li>
-                      <li className="nav-item  mx-2">
-                        <a href="/" role="button" className="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center">
-                        Movies
-                        </a>
-                      </li>
-                      <li className="nav-item  mx-2">
-                        <a href="/" role="button" className="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center">
-                        Tv Series
-                        </a>
-                      </li>
+                     
                       <li className="nav-item dropdown mx-2">
-                        <a href="/" role="button" className="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center">
-                          Types
-                        </a>
+                        <li  role="button" className="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center">
+                        Movies
+                        </li>
                         <ul className="dropdown-containt" >
-                          <li className="drop-item"><a className="drop-link" href="/">Upcoming</a></li>
-                          <li className="drop-item"><a className="drop-link" href="/">Popular</a></li>
-                          <li className="drop-item"><a className="drop-link" href="/">Top_rated</a></li>
+                          <li className="drop-item"><Link className="drop-link" to="/upcoming">Upcoming</Link></li>
+                          <li className="drop-item"><Link className="drop-link" to="/popular">Popular</Link></li>
+                          <li className="drop-item"><Link className="drop-link" to="/topRated">Top_rated</Link></li>
+                          <li className="drop-item"><Link className="drop-link" to="/latest">Latest</Link></li>
+                          <li className="drop-item"><Link className="drop-link" to="/adult">Adults</Link></li>
                         </ul>
                       </li>
-                    
-                      <SearchBar/>
+                      <li className="nav-item dropdown mx-2">
+                        <li role="button" className="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center">
+                        Tv Series
+                        </li>
+                        <ul className="dropdown-containt" >
+                          <li className="drop-item"><Link className="drop-link" to="/tvOnTheAir">On The Air</Link></li>
+                          <li className="drop-item"><Link className="drop-link" to="/tvPopular">Popular</Link></li>
+                          <li className="drop-item"><Link className="drop-link" to="/tvLatest">Latest</Link></li>
+                          <li className="drop-item"><Link className="drop-link" to="/tvAiringToday">Airing Today</Link></li>
+                          <li className="drop-item"><Link className="drop-link" to="/tvTopRated">Top_rated</Link></li>
+                          <li className="drop-item"><Link className="drop-link" to="/tvAdult">Adults</Link></li>
+                        </ul>
+                      </li>
+                      <li className="nav-item dropdown mx-2">
+                        <Link to="/searchBar" role="button" className="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center">
+                          {/* <img id="searchIcon" src={SearchBar} alt="Search"/> */} Search
+                        </Link>
+                      </li>
                     </ul>
                   </div>
                 </div>

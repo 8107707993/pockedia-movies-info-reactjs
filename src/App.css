@@ -27,6 +27,135 @@
   }
 }
 
+:root {
+  --shadowColor :#c1d2006c;
+  --bcColor :#aacc00;
+  --secondColor:#80b918;
+  --trioColor:#55a630;
+  --squardColor:#2b9348;
+}
+.backGround1{
+  position: fixed;
+  background-color: var(--bcColor);
+  top: 50px;
+  left: 50px;
+  z-index: 0;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  box-shadow: 10px 10px 10px 10px var(--shadowColor), -10px -10px 10px var(--shadowColor) ;
+}
+.backGround1 .second{
+  
+  position: absolute;
+  background-color: var(--secondColor);
+  bottom: 0px;
+  right: 0px;
+  z-index: 0;
+  height: 85%;
+  width: 85%;
+  border-radius: 50%;
+  box-shadow: 10px 10px 10px 10px var(--shadowColor), -10px -10px 10px var(--shadowColor) ;
+}
 
+.backGround1 .second .trio{
 
+  position: absolute;
+  background-color: var(--trioColor);
+  bottom: 0px;
+  right: 0px;
+  z-index: 0;
+  height: 85%;
+  width: 85%;
+  border-radius: 50%;
+  box-shadow: 10px 10px 10px 10px var(--shadowColor), -10px -10px 10px var(--shadowColor) ;
+}
 
+.backGround1 .second .trio .squard{
+
+  position: absolute;
+  background-color: var(--squardColor);
+  bottom: 0px;
+  right: 0px;
+  z-index: 0;
+  height: 85%;
+  width: 85%;
+  border-radius: 50%;
+  box-shadow: 10px 10px 10px 10px var(--shadowColor), -10px -10px 10px var(--shadowColor) ;
+}
+
+.backGround2{
+  position: fixed;
+  background-color: var(--bcColor);
+  bottom: 50px;
+  right:50px;
+  z-index: 0;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  box-shadow: 10px 10px 10px 10px var(--shadowColor), -10px -10px 10px var(--shadowColor) ;
+}
+.backGround2 .second2{
+  
+  position: absolute;
+  background-color: var(--secondColor);
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+  height: 85%;
+  width: 85%;
+  border-radius: 50%;
+  box-shadow: 10px 10px 10px 10px var(--shadowColor), -10px -10px 10px var(--shadowColor) ;
+}
+
+.backGround2 .second2 .trio2{
+
+  position: absolute;
+  background-color: var(--trioColor);
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+  height: 85%;
+  width: 85%;
+  border-radius: 50%;
+  box-shadow: 10px 10px 10px 10px var(--shadowColor), -10px -10px 10px  var(--shadowColor);
+}
+
+.backGround2 .second2 .trio2 .squard2{
+
+  position: absolute;
+  background-color: var(--squardColor);
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+  height: 85%;
+  width: 85%;
+  border-radius: 50%;
+  box-shadow: 10px 10px 10px 10px var(--shadowColor), -10px -10px 10px var(--shadowColor) ;
+}
+
+@media screen and (max-width: 600px) {
+  .backGround1{
+    position: fixed;
+    background-color: var(--bcColor);
+    top: 50px;
+    left: 50px;
+    z-index: 0;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    box-shadow: 10px 10px 10px 10px var(--shadowColor), -10px -10px 10px var(--shadowColor) ;
+  }
+
+  .backGround2{
+    position: fixed;
+    background-color: var(--bcColor);
+    bottom: 50px;
+    right:50px;
+    z-index: 0;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    box-shadow: 10px 10px 10px 10px var(--shadowColor), -10px -10px 10px var(--shadowColor) ;
+  }
+}

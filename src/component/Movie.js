@@ -1,23 +1,26 @@
 import React, { useEffect, useState } from "react";
 import Movieitem from "./Movieitem";
 import axios from "axios";
-import "./MovieCard.css";
+import "./css/MovieCard.css";
 import GenreSlide from "./GenreSlide";
 import useGenres from "./useGenre";
 
 const Movie = (props) => {
   const [movieResults, setMovieResults] = useState();
-  const [pageNo, setPageNo] = useState(1);
-  const [totalPage, setTotalPage] = useState();
   const [selectedGenres, setSelectedGenres] = useState([]);
   const [genress, setGenress] = useState({});
   const apiKey = props.apiKey;
   const baseurl = props.baseurl;
   const genresUrl = useGenres(selectedGenres);
+  const language = props.language;
+  const pageNo = props.pageNo;
+  const setPageNo =props.setPageNo;
+  const totalPage =props.totalPage;
+  const setTotalPage = props.setTotalPage;
   useEffect(() => {
     axios
       .get(
-        `https://api.themoviedb.org/3/movie/upcoming?api_key=${apiKey}&language=en-US&page=${pageNo}&with_genres=${genresUrl}`
+        `https://api.themoviedb.org/3/${props.category}/${props.type}?api_key=${apiKey}&language=${language}&page=${pageNo}&with_genres=${genresUrl}`
       )
       .then(({ data }) => {
         setMovieResults(data.results);
@@ -25,7 +28,7 @@ const Movie = (props) => {
         console.log(data);
       })
       .catch((err) => console.log(err));
-  }, [pageNo, apiKey,genresUrl]);
+  }, [pageNo, apiKey,genresUrl,language]);
 
   const handelNextClick = async () => {
     setPageNo(pageNo + 1);
@@ -58,9 +61,9 @@ const Movie = (props) => {
                   <Movieitem
                     language={element.original_language}
                     vote_average={element.vote_average}
-                    original_title={element.original_title}
-                    title={element.title}
-                    release_date={element.release_date}
+                    original_title={element.original_title || element.original_name}
+                    title={element.title || element.name}
+                    release_date={element.release_date || element.first_air_date}
                     genres={[element.genre_ids]}
                     overview={element.overview}
                     imageUrl={element.poster_path}
@@ -77,7 +80,7 @@ const Movie = (props) => {
           disabled={pageNo <= 1}
           type="button"
           onClick={handelPrevClick}
-          className="btn np"
+          className="btn np" style={{zIndex:"100"}}
         >
           &laquo; Previous{" "}
         </button>
@@ -86,7 +89,7 @@ const Movie = (props) => {
           disabled={pageNo >= totalPage}
           type="button"
           onClick={handelNextClick}
-          className="btn np"
+          className="btn np" style={{zIndex:"100"}}
         >
           Next &raquo;
         </button>

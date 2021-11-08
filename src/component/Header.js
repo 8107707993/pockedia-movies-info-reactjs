@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
-import "./Navbar.css";
+import "./css/Navbar.css";
 const Header = () => {
   var TxtRotate = function (el, toRotate, period) {
     this.toRotate = toRotate;

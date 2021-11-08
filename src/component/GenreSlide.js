@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect } from "react";
-import "./GenreSlide.css";
+import "./css/GenreSlide.css";
 
 const GenreSlide = ({
   genress,
@@ -52,7 +52,7 @@ const GenreSlide = ({
     <>
       <div className="chip">
       {movieResults && selectedGenres && selectedGenres.map((genre)=>(
-          <div className="name" style={{backgroundColor:"rgb(253, 173, 0)"}} onClick={() => hendeleRemove(genre)} key={genre.id}>{genre.name} </div>
+          <div className="name" style={{backgroundColor:"#18345b"}} onClick={() => hendeleRemove(genre)} key={genre.id}>{genre.name} </div>
         ))}
         {movieResults && genress.map((genre)=>(
           <div className="name" onClick={() => hendeleAdd(genre)} key={genre.id}>{genre.name} </div>

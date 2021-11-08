@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import './CompoStyle.css';
+import './css/CompoStyle.css';
 
 const ScrollTotop = () => {
     const [upVisible, setUpVisible] = useState(false)
@@ -56,12 +56,12 @@ const ScrollTotop = () => {
     
     return (
         <div>
-            <button id="circlebtnUp" className="circleButton">
-                <i className="fas fa-angle-double-up" onClick={scrollToTop} style={{display:upVisible ? 'inline':'none'}}>
+            <button id="circlebtnUp" className="circleButton" onClick={scrollToTop}>
+                <i className="fas fa-angle-double-up"  style={{display:upVisible ? 'inline':'none'}}>
                 </i>        
             </button>
-            <button id="circlebtnDown" className="circleButtonDown">
-                <i className="fas fa-angle-double-down" onClick={scrollToBottom} style={{display:downVisible ? 'inline':'none'}}>
+            <button id="circlebtnDown" className="circleButtonDown" onClick={scrollToBottom}>
+                <i className="fas fa-angle-double-down"  style={{display:downVisible ? 'inline':'none'}}>
                 </i>        
             </button>
             
