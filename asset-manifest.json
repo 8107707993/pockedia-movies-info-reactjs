@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/pockedia_movies_inforeactjs/static/css/main.c487d910.chunk.css",
-    "main.js": "/pockedia_movies_inforeactjs/static/js/main.bc4a7fe8.chunk.js",
-    "main.js.map": "/pockedia_movies_inforeactjs/static/js/main.bc4a7fe8.chunk.js.map",
+    "main.css": "/pockedia_movies_inforeactjs/static/css/main.a542c657.chunk.css",
+    "main.js": "/pockedia_movies_inforeactjs/static/js/main.c9dea5ef.chunk.js",
+    "main.js.map": "/pockedia_movies_inforeactjs/static/js/main.c9dea5ef.chunk.js.map",
     "runtime-main.js": "/pockedia_movies_inforeactjs/static/js/runtime-main.6315b612.js",
     "runtime-main.js.map": "/pockedia_movies_inforeactjs/static/js/runtime-main.6315b612.js.map",
     "static/js/2.eef5c635.chunk.js": "/pockedia_movies_inforeactjs/static/js/2.eef5c635.chunk.js",
@@ -10,14 +10,14 @@
     "static/js/3.a0ccbb2f.chunk.js": "/pockedia_movies_inforeactjs/static/js/3.a0ccbb2f.chunk.js",
     "static/js/3.a0ccbb2f.chunk.js.map": "/pockedia_movies_inforeactjs/static/js/3.a0ccbb2f.chunk.js.map",
     "index.html": "/pockedia_movies_inforeactjs/index.html",
-    "static/css/main.c487d910.chunk.css.map": "/pockedia_movies_inforeactjs/static/css/main.c487d910.chunk.css.map",
+    "static/css/main.a542c657.chunk.css.map": "/pockedia_movies_inforeactjs/static/css/main.a542c657.chunk.css.map",
     "static/js/2.eef5c635.chunk.js.LICENSE.txt": "/pockedia_movies_inforeactjs/static/js/2.eef5c635.chunk.js.LICENSE.txt",
     "static/media/icons8-search.2affdb7a.gif": "/pockedia_movies_inforeactjs/static/media/icons8-search.2affdb7a.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.6315b612.js",
     "static/js/2.eef5c635.chunk.js",
-    "static/css/main.c487d910.chunk.css",
-    "static/js/main.bc4a7fe8.chunk.js"
+    "static/css/main.a542c657.chunk.css",
+    "static/js/main.c9dea5ef.chunk.js"
   ]
 }
