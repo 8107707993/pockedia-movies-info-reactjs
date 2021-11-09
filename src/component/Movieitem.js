@@ -1,6 +1,7 @@
 import React from "react";
 import Title from 'react-vanilla-tilt'
 import "./css/MovieCard.css";
+import AddFavourite from "./icon/AddFavourite";
 
 const Movieitem = (props)=> {
 
@@ -15,8 +16,10 @@ const Movieitem = (props)=> {
       language,
       genres,
       movie_id,
+      elements,
       backdrop_path,
     } =props;
+
     return (
       <>
         
@@ -46,7 +49,11 @@ const Movieitem = (props)=> {
               </p>
             </div>
             <div className="hoverContent">
-              <div className="contentitem"><p>
+              <div className="contentitem">
+                <div  onClick={()=> props.addfavouritesMovie(elements)} className="favouriteStyle">
+                <AddFavourite/>       
+                </div>
+                              <p>
                 <span>Title:- </span>
                 {original_title}
               </p>

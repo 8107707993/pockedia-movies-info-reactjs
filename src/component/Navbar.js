@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./css/Navbar.css";
-import SearchBar from "./image/icons8-search.gif";
 const Navbar = ()=> {
   
     return (
@@ -44,7 +43,13 @@ const Navbar = ()=> {
                         Trending
                         </Link>
                       </li>
-                     
+
+                      <li className="nav-item  mx-2">
+                        <Link to="/favourite" role="button" className="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center">
+                        Favourite
+                        </Link>
+                      </li>
+
                       <li className="nav-item dropdown mx-2">
                         <li  role="button" className="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center">
                         Movies
@@ -72,7 +77,6 @@ const Navbar = ()=> {
                       </li>
                       <li className="nav-item dropdown mx-2">
                         <Link to="/searchBar" role="button" className="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center">
-                          {/* <img id="searchIcon" src={SearchBar} alt="Search"/> */} Search
                         </Link>
                       </li>
                     </ul>

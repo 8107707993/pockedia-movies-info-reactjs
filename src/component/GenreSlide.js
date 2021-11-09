@@ -51,10 +51,10 @@ const GenreSlide = ({
   return (
     <>
       <div className="chip">
-      {movieResults && selectedGenres && selectedGenres.map((genre)=>(
+      { selectedGenres && selectedGenres.map((genre)=>(
           <div className="name" style={{backgroundColor:"#18345b"}} onClick={() => hendeleRemove(genre)} key={genre.id}>{genre.name} </div>
         ))}
-        {movieResults && genress.map((genre)=>(
+        {genress && movieResults && genress.map((genre)=>(
           <div className="name" onClick={() => hendeleAdd(genre)} key={genre.id}>{genre.name} </div>
         ))}
       </div>

@@ -6,7 +6,8 @@ import GenreSlide from "./GenreSlide";
 import useGenres from "./useGenre";
 
 const Movie = (props) => {
-  const [movieResults, setMovieResults] = useState();
+  const movieResults = props.movieResults;
+  const setMovieResults = props.setMovieResults;
   const [selectedGenres, setSelectedGenres] = useState([]);
   const [genress, setGenress] = useState({});
   const apiKey = props.apiKey;
@@ -17,6 +18,7 @@ const Movie = (props) => {
   const setPageNo =props.setPageNo;
   const totalPage =props.totalPage;
   const setTotalPage = props.setTotalPage;
+  const addfavouritesMovie = props.hendeleFavouriteClick;
   useEffect(() => {
     axios
       .get(
@@ -59,6 +61,8 @@ const Movie = (props) => {
               return (
                 <div className="col-md-4 cardSty" key={element.id}>
                   <Movieitem
+                    elements={element}
+                    addfavouritesMovie={addfavouritesMovie}
                     language={element.original_language}
                     vote_average={element.vote_average}
                     original_title={element.original_title || element.original_name}
@@ -97,16 +101,5 @@ const Movie = (props) => {
     </>
   );
 };
-// static defaultProps = {
-//   // region: "in",
-//   pageSize: 10,
-//   // category: "general",
-// };
-
-// static propType = {
-//   // country: PropTypes.string,
-//   pageSize: PropTypes.number,
-//   // category: PropTypes.string,
-// };
 
 export default Movie;
