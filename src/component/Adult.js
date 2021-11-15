@@ -25,9 +25,10 @@ const Adult = (props) => {
       .then(({ data }) => {
         setMovieResults(data.results);
         setTotalPage(data.total_pages);
-        console.log(data);
+        // console.log(data);
       })
       .catch((err) => console.log(err));
+      // eslint-disable-next-line
   }, [pageNo, apiKey,genresUrl,language]);
 
   const handelNextClick = async () => {
@@ -68,6 +69,7 @@ const Adult = (props) => {
                     overview={element.overview}
                     imageUrl={element.poster_path}
                     movie_id={element.id}
+                    type={props.ctype}
                     backdrop_path={element.backdrop_path}
                   />
                 </div>

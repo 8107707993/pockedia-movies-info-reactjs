@@ -1,127 +1,132 @@
 @import url("https://fonts.googleapis.com/css2?family=Ephesis&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ephesis&family=PT+Serif:wght@400;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,900;1,100;1,200;1,500;1,900&family=Roboto:wght@100;500;900&family=Zen+Antique&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,900;1,100;1,200;1,500;1,900&family=Roboto:wght@100;500;900&family=Zen+Antique&display=swap");
 
 /* font-family: 'Poppins', sans-serif;
 font-family: 'Roboto', sans-serif;
 font-family: 'Zen Antique', serif; */
 
-
-
 /* Search bar css */
-.searchContainer{
-    background: #fff;
-    margin-top: 130px;
-    height: 40px;
-    position: absolute;
-    left: 20vw;
-    width: 60vw;
-    background-color: rgb(255, 255, 255);
-    border-radius: 30px;
-    padding: 10px 20px;
-    display: flex;
-    flex-wrap:nowrap;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: 0.8s;
-    box-shadow:inset 10px 10px 10px 10px rgba(255,255,255,.5),
-    inset -7px -7px 10px 0px rgba(0,0,0,.1),
-   7px 7px 20px 0px rgba(0,0,0,.1),
-   4px 4px 5px 0px rgba(0,0,0,.1);
-   text-shadow:  0px 0px 6px rgba(255,255,255,.3),
-              -4px -4px 6px rgba(116, 125, 136, .2);
-  text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
-  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
-              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
-    inset -4px -4px 6px 0 rgba(255,255,255,.2),
-    inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+.searchContainer {
+  background: #fff;
+  margin-top: 130px;
+  height: 40px;
+  position: absolute;
+  left: 20vw;
+  width: 60vw;
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+  padding: 10px 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.8s;
+  box-shadow: inset 10px 10px 10px 10px rgba(255, 255, 255, 0.5),
+    inset -7px -7px 10px 0px rgba(0, 0, 0, 0.1),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.3),
+    -4px -4px 6px rgba(116, 125, 136, 0.2);
+  text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3),
+    -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.searchContainer:hover > .searchInput {
+  width: 100%;
+}
+.searchContainer .searchInput:focus,
+.searchContainer .searchInput:active {
+  outline: none;
+  width: 100%;
+}
+.searchContainer .searchInput {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 0px;
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.9s;
+}
+
+.searchContainer .searchbtn .fas {
+  color: #5cbdbb;
+}
+
+@keyframes hoverShake {
+  0% {
+    transform: skew(0deg, 0deg);
   }
-  
-  .searchContainer:hover > .searchInput{
-    width: 100%;
+  25% {
+    transform: skew(5deg, 5deg);
   }
-  .searchContainer .searchInput:focus, .searchContainer .searchInput:active{
-    outline:none;
-    width: 100%;
+  75% {
+    transform: skew(-5deg, -5deg);
   }
-  .searchContainer .searchInput{
-    background: transparent;
-    border: none;
-    outline:none;
-    width: 0px;
-    font-weight: 500;
-    font-size: 16px;
-    transition: 0.9s;
-  
+  100% {
+    transform: skew(0deg, 0deg);
   }
-  
-  .searchContainer .searchbtn .fas{
-    color: #5cbdbb;
+}
+
+.searchContainer:focus,.searchContainer:hover .searchbtn .fas{
+  opacity: 0;
+}
+
+.searchContainer:hover {
+  animation: hoverShake 0.3s linear 1;
+}
+
+@media screen and(max-width:600px) {
+  .searchContainer {
+    max-width: 200px;
   }
-  
-  @keyframes hoverShake {
-  0% {transform: skew(0deg,0deg);}
-  25% {transform: skew(5deg, 5deg);}
-  75% {transform: skew(-5deg, -5deg);}
-  100% {transform: skew(0deg,0deg);}
-  }
-  
-  .searchContainer:hover{
-  animation: hoverShake 0.30s linear 1;
-  }
-  
-  @media screen and(max-width:600px) {
-      .searchContainer{
-        max-width: 200px;
-      }  
-  }
-  /* Next and Previous */
-  .container .npBox{
-    margin-top: 250px;
+}
+/* Next and Previous */
+.container .npBox {
+  margin-top: 250px;
+}
+
+/* PageLable */
+.pageLableBox {
+  display: flex;
+  position: sticky;
+  justify-content: right;
+  align-items: top;
+  overflow-x: 90%;
+  margin-top: 125px;
+}
+.pageLableBox .pageLable {
+  position: fixed;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+  padding: 10px 5px;
+  color: #fff;
+  background-color: #ffffff09;
+  box-shadow: 20px 20px 50px rgb(0, 0, 0);
+}
+
+@media screen and (max-width: 600px) {
+  .pageLableBox {
+    margin-right: 0px;
   }
 
-  /* PageLable */
-  .pageLableBox{
-    display: flex;
-    position: sticky;
-    justify-content: right;
-    align-items: top;
-    overflow-x: 90%;
-    margin-top: 125px;
-    
-    } 
-    .pageLableBox .pageLable{
-      position:fixed;
-      border-top: 1px solid rgba(255, 255, 255, 0.5);
-      border-left: 1px solid rgba(255, 255, 255, 0.5);
-      backdrop-filter: blur(5px);
-      border-radius: 5px;
-      padding: 10px 5px ;
-      color: #fff;
-      background-color:#ffffff09 ;
-      box-shadow: 20px 20px 50px rgb(0, 0, 0);
-    }
-    
-    @media screen and (max-width: 600px) {
-      .pageLableBox{
-        margin-right: 0px;
-      }
-      
-      .pageLableBox .pageLable{
-        transform: rotate(90deg);
-        margin-right: -34px;
-    
-      }
-    
-    }
-    
+  .pageLableBox .pageLable {
+    transform: rotate(90deg);
+    margin-right: -34px;
+  }
+}
 
-  /* SearchCard css */
-.uni-Font{
+/* SearchCard css */
+.uni-Font {
   font-size: 12px;
 }
-.searchcard{
+.searchcard {
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -129,47 +134,46 @@ font-family: 'Zen Antique', serif; */
   align-items: center;
   justify-content: center;
 }
-.searchcard  .seacard{
+.searchcard .seacard {
   position: relative;
-     border-radius: 20px;
-     margin: 5px 10px 5px 0px;
-     background-color: rgba(0, 15, 151, 0.582);
-     padding: 5px 5px;
-     height: fit-content;
-     width: 210px;
-  }
+  border-radius: 20px;
+  margin: 5px 10px 5px 0px;
+  background-color: rgba(0, 15, 151, 0.582);
+  padding: 5px 5px;
+  height: fit-content;
+  width: 210px;
+}
 
-  .searchcard .seacard .contents{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Poppins', sans-serif;
-    background-color: rgba(0, 15, 151, 0.582);
-    border-radius: 20px;
-    color: #fff;
-  }
+.searchcard .seacard .contents {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  background-color: rgba(0, 15, 151, 0.582);
+  border-radius: 20px;
+  color: #fff;
+}
 
-.searchcard .seacard .contents .img{
-  border-radius: 20px; 
+.searchcard .seacard .contents .img {
+  border-radius: 20px;
   width: 200px;
   height: 100%;
- }
+}
 
-.searchcard .seacard .contents h3{
-  font-family: 'Zen Antique', serif;
+.searchcard .seacard .contents h3 {
+  font-family: "Zen Antique", serif;
   font-size: 20px;
   margin: 5px 10px;
-  
 }
 
 /* hoverContent css */
 
-.seacard .hoverContainer{
+.seacard .hoverContainer {
   position: absolute;
   display: flex;
   flex-wrap: wrap;
-  
+
   bottom: 0px;
   color: #fff;
   transform: translateY(0%);
@@ -181,30 +185,29 @@ font-family: 'Zen Antique', serif; */
   top: 0px;
 }
 
-.seacard .hoverContainer .hoverContaent{
+.seacard .hoverContainer .hoverContaent {
   width: 100%;
-  
 }
 
-.seacard .hoverContainer .hoverContaent h4{
+.seacard .hoverContainer .hoverContaent h4 {
   margin: 2px 0px 5px 0px;
   position: fixed;
- background-color:  rgba(0, 15, 151);
- border-radius: 20px;
+  background-color: rgba(0, 15, 151);
+  border-radius: 20px;
 }
 .seacard .hoverContainer .hoverContaent .img1:hover {
   position: relative;
   width: 100%;
-
 }
-.seacard .hoverContainer .hoverContaent .img1 ,.img2{
+.seacard .hoverContainer .hoverContaent .img1,
+.img2 {
   width: 90%;
   margin: 10px 5px;
   border-radius: 20px;
 }
-.seacard:hover .hoverContainer{
+.seacard:hover .hoverContainer {
   opacity: 100;
 }
-.seacard:hover .contents{
+.seacard:hover .contents {
   opacity: 0;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./css/Navbar.css";
-const Navbar = ()=> {
+const Navbar = (props)=> {
   
     return (
       <>
@@ -45,8 +45,14 @@ const Navbar = ()=> {
                       </li>
 
                       <li className="nav-item  mx-2">
-                        <Link to="/favourite" role="button" className="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center">
-                        Favourite
+                        <Link to="/watchlist" role="button" className="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center">
+                        Watchlist
+                        </Link>
+                      </li>
+
+                      <li className="nav-item  mx-2">
+                        <Link to="/watched" role="button" className="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center">
+                        Watched
                         </Link>
                       </li>
 
@@ -55,10 +61,10 @@ const Navbar = ()=> {
                         Movies
                         </li>
                         <ul className="dropdown-containt" >
-                          <li className="drop-item"><Link className="drop-link" to="/upcoming">Upcoming</Link></li>
-                          <li className="drop-item"><Link className="drop-link" to="/popular">Popular</Link></li>
-                          <li className="drop-item"><Link className="drop-link" to="/topRated">Top_rated</Link></li>
-                          <li className="drop-item"><Link className="drop-link" to="/latest">Latest</Link></li>
+                          <li onClick={props.hendelTypeClick} value="/upcoming" className="drop-item"><Link className="drop-link" to="/upcoming">Upcoming</Link></li>
+                          <li onClick={props.hendelTypeClick} value="/popular" className="drop-item"><Link className="drop-link" to="/popular">Popular</Link></li>
+                          <li onClick={props.hendelTypeClick} value="/top_rated" className="drop-item"><Link className="drop-link" to="/topRated">Top_rated</Link></li>
+                          <li onClick={props.hendelTypeClick} value="/latest" className="drop-item"><Link className="drop-link" to="/latest">Latest</Link></li>
                           <li className="drop-item"><Link className="drop-link" to="/adult">Adults</Link></li>
                         </ul>
                       </li>
@@ -67,18 +73,19 @@ const Navbar = ()=> {
                         Tv Series
                         </li>
                         <ul className="dropdown-containt" >
-                          <li className="drop-item"><Link className="drop-link" to="/tvOnTheAir">On The Air</Link></li>
-                          <li className="drop-item"><Link className="drop-link" to="/tvPopular">Popular</Link></li>
-                          <li className="drop-item"><Link className="drop-link" to="/tvLatest">Latest</Link></li>
-                          <li className="drop-item"><Link className="drop-link" to="/tvAiringToday">Airing Today</Link></li>
-                          <li className="drop-item"><Link className="drop-link" to="/tvTopRated">Top_rated</Link></li>
+                          <li onClick={props.hendelTypeClick} value="/on_the_air" className="drop-item"><Link className="drop-link" to="/tvOnTheAir">On The Air</Link></li>
+                          <li onClick={props.hendelTypeClick} value="/popular" className="drop-item"><Link className="drop-link" to="/tvPopular">Popular</Link></li>
+                          <li onClick={props.hendelTypeClick} value="/latest" className="drop-item"><Link className="drop-link" to="/tvLatest">Latest</Link></li>
+                          <li onClick={props.hendelTypeClick} value="/airing_today" className="drop-item"><Link className="drop-link" to="/tvAiringToday">Airing Today</Link></li>
+                          <li onClick={props.hendelTypeClick} value="/top_rated" className="drop-item"><Link className="drop-link" to="/tvTopRated">Top_rated</Link></li>
                           <li className="drop-item"><Link className="drop-link" to="/tvAdult">Adults</Link></li>
                         </ul>
                       </li>
-                      <li className="nav-item dropdown mx-2">
+                      {/* <li className="nav-item mx-2">
                         <Link to="/searchBar" role="button" className="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center">
+                        Search
                         </Link>
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
                 </div>

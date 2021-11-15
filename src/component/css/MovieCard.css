@@ -151,3 +151,15 @@ margin-top: 125px;
   z-index: 1;
   position: relative;
 }
+
+/* Title css  */
+
+.title{
+  color: #fff;
+  font-size: 32px;
+  font-weight: 900;
+  margin-top:100px;
+  z-index: 1;
+  position: absolute;
+  left: 44vw;
+}

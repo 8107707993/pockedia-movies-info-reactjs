@@ -8,6 +8,8 @@ import useGenres from "./useGenre";
 const Trending = (props) => {
   const [movieResults, setMovieResults] = useState();
   const [selectedGenres, setSelectedGenres] = useState([]);
+  // const selectedGenres = props.selectedGenres;
+  // const setSelectedGenres = props.setSelectedGenres;
   const [genress, setGenress] = useState({});
   const apiKey = props.apiKey;
   const baseurl = props.baseurl;
@@ -25,9 +27,10 @@ const Trending = (props) => {
       .then(({ data }) => {
         setMovieResults(data.results);
         setTotalPage(data.total_pages);
-        console.log(data);
+        // console.log(data);
       })
       .catch((err) => console.log(err));
+      // eslint-disable-next-line
   }, [pageNo, apiKey,genresUrl,language]);
 
   const handelNextClick = async () => {
@@ -68,6 +71,8 @@ const Trending = (props) => {
                     overview={element.overview}
                     imageUrl={element.poster_path}
                     movie_id={element.id}
+                    elements={element}
+                    type={props.ctype}
                     backdrop_path={element.backdrop_path}
                   />
                 </div>

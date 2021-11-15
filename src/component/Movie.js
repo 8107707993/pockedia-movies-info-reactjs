@@ -25,11 +25,18 @@ const Movie = (props) => {
         `https://api.themoviedb.org/3/${props.category}/${props.type}?api_key=${apiKey}&language=${language}&page=${pageNo}&with_genres=${genresUrl}`
       )
       .then(({ data }) => {
-        setMovieResults(data.results);
-        setTotalPage(data.total_pages);
-        console.log(data);
+        if (!data.errors) {
+          setMovieResults(data.results);
+          setTotalPage(data.total_pages);
+          console.log(data);
+          
+        } else {
+          setMovieResults([]);
+          setTotalPage([]);
+        }
       })
       .catch((err) => console.log(err));
+      // eslint-disable-next-line
   }, [pageNo, apiKey,genresUrl,language]);
 
   const handelNextClick = async () => {
@@ -39,8 +46,12 @@ const Movie = (props) => {
     setPageNo(pageNo - 1);
   };
 
+  function capitise(str) {
+   return str.charAt(0).toUpperCase() + str.slice(1);
+  }
+
   return (
-    <>
+    <><div className="title">{capitise(props.type)}</div>
       <div className="pageLableBox">
         <p className="pageLable">Page No :{pageNo}</p>
       </div>
@@ -62,7 +73,6 @@ const Movie = (props) => {
                 <div className="col-md-4 cardSty" key={element.id}>
                   <Movieitem
                     elements={element}
-                    addfavouritesMovie={addfavouritesMovie}
                     language={element.original_language}
                     vote_average={element.vote_average}
                     original_title={element.original_title || element.original_name}
@@ -72,6 +82,7 @@ const Movie = (props) => {
                     overview={element.overview}
                     imageUrl={element.poster_path}
                     movie_id={element.id}
+                    type={props.ctype}
                     backdrop_path={element.backdrop_path}
                   />
                 </div>

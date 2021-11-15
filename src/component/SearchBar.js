@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import SearchCard from "./SearchCard";
+// import SearchCard from "./SearchCard";
 import "./css/SearchBar.css";
 import Movieitem from "./Movieitem";
 
@@ -31,7 +31,7 @@ function SearchBar(props) {
       }
     });
   };
-  console.log(resultss + "search data");
+  // console.log(resultss + "search data");
 
   const handelNextClick = async () => {
     setPageNo(pageNo + 1);
@@ -56,7 +56,7 @@ function SearchBar(props) {
             onChange={onChange}
             value={query}
           />
-          <a href="/" className="searchbtn">
+          <a className="searchbtn">
             <i className="fas fa-search"></i>
           </a>
         </div>
@@ -68,7 +68,7 @@ function SearchBar(props) {
             title={movie.title || movie.name}
             language={movie.original_language}
             vote_average={movie.vote_average}
-            original_title={movie.original_title}
+            original_title={movie.original_title || movie.original_name}
             release_date={movie.release_date || movie.air_date}
             genres={[movie.genre_ids]}
             overview={movie.overview}

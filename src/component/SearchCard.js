@@ -6,7 +6,6 @@ import axios from "axios";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import { Link } from "react-router-dom";
-import FullViwe from "./FullViwe";
 
 function SearchCard({
   title,
@@ -21,7 +20,6 @@ function SearchCard({
   backdrop_path,
 }) {
   const baseurl = "https://api.themoviedb.org/3/";
-  const mId = document.getElementById({movie_id})
   // const videoUrl = "https://api.themoviedb.org/3/movie/{movie_id}/videos?api_key=<<api_key>>&language=en-US";
   const [movieId, setMovieId] = useState(11470);
   const [movieVideoLink, setMovieVideoLink] = useState([]);
@@ -54,7 +52,6 @@ function SearchCard({
   <Router>
     <Switch>
       <Route exact path="/more">
-        <FullViwe movieId={mId}/>
       </Route>
     </Switch>
   </Router>

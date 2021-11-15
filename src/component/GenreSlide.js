@@ -36,7 +36,7 @@ const GenreSlide = ({
      setGenress({});
    }
    // eslint-disable-next-line
-  }, []);
+  }, [baseurl,type]);
 
   const hendeleAdd =(genre) =>{
    setSelectedGenres([...selectedGenres,genre]);
