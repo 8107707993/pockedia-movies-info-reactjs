@@ -8,11 +8,10 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import SearchBar from "./component/SearchBar";
 import Adult from "./component/Adult";
 import Movie from "./component/Movie";
-import AddFavourite from "./component/icon/AddFavourite";
-import RemoveFavourite from "./component/icon/RemoveFavourite";
 import { GlobalProvider } from "./context/GlobalState";
 import Watchlist from "./component/Watchlist";
 import Watched from "./component/Watched";
+import Favourite from "./component/Favourite";
 // import axios from "axios";
 
 // GlobalContext
@@ -21,7 +20,6 @@ const App = () => {
   const [pageNo, setPageNo] = useState(1);
   const [totalPage, setTotalPage] = useState();
   const [movieResults, setMovieResults] = useState();
-  const [favourites, setFavourites] = useState([]);
   const mCategory = "movie";
   const tvCategory = "tv";
   const apiKey = process.env.REACT_APP_TMDB_API;
@@ -33,31 +31,6 @@ const App = () => {
   // const hendelePreview = async (id)=>{
   //   await axios.get()
   // }
-
-  useEffect(() => {
-    const movieFavourite = JSON.parse(
-      localStorage.getItem("react-movie-favourite-list")
-    );
-    setFavourites(movieFavourite);
-  }, []);
-
-  const saveToLoacalStorage = (item) => {
-    localStorage.setItem("react-movie-favourite-list", JSON.stringify(item));
-  };
-
-  const addFavouriteMovie = (elements) => {
-    const newFavouriteMovie = [...favourites, elements];
-    setMovieResults(movieResults.filter((g) => g.id !== elements.id));
-    setFavourites(newFavouriteMovie);
-    saveToLoacalStorage(newFavouriteMovie);
-    console.log(favourites);
-  };
-
-  const removeFavouriteMovie = (element) => {
-    const newFavouriteMovie = favourites.filter((fav) => fav.id !== element.id);
-    setFavourites(newFavouriteMovie);
-    saveToLoacalStorage(newFavouriteMovie);
-  };
 
   return (
     <>
@@ -97,6 +70,10 @@ const App = () => {
               />
             </Route>
 
+            <Route exact path="/favourite">
+              <Favourite type="favourite" />
+            </Route>
+
             <Route exact path="/watchlist">
               <Watchlist type="WatchList" />
             </Route>
@@ -112,8 +89,6 @@ const App = () => {
                 ctype="genral"
                 movieResults={movieResults}
                 setMovieResults={setMovieResults}
-                addFavourites={AddFavourite}
-                hendeleFavouriteClick={addFavouriteMovie}
                 category={mCategory}
                 totalPage={totalPage}
                 setTotalPage={setTotalPage}
@@ -133,8 +108,6 @@ const App = () => {
                 category={mCategory}
                 movieResults={movieResults}
                 setMovieResults={setMovieResults}
-                addFavourites={AddFavourite}
-                hendeleFavouriteClick={addFavouriteMovie}
                 totalPage={totalPage}
                 setTotalPage={setTotalPage}
                 apiKey={apiKey}
@@ -153,8 +126,6 @@ const App = () => {
                 ctype="genral"
                 movieResults={movieResults}
                 setMovieResults={setMovieResults}
-                addFavourites={AddFavourite}
-                hendeleFavouriteClick={addFavouriteMovie}
                 totalPage={totalPage}
                 setTotalPage={setTotalPage}
                 apiKey={apiKey}
@@ -174,8 +145,6 @@ const App = () => {
                 totalPage={totalPage}
                 movieResults={movieResults}
                 setMovieResults={setMovieResults}
-                addFavourites={AddFavourite}
-                hendeleFavouriteClick={addFavouriteMovie}
                 setTotalPage={setTotalPage}
                 apiKey={apiKey}
                 pageNo={pageNo}
@@ -209,8 +178,6 @@ const App = () => {
                 ctype="genral"
                 movieResults={movieResults}
                 setMovieResults={setMovieResults}
-                addFavourites={AddFavourite}
-                hendeleFavouriteClick={addFavouriteMovie}
                 category={tvCategory}
                 totalPage={totalPage}
                 setTotalPage={setTotalPage}
@@ -230,8 +197,6 @@ const App = () => {
                 category={tvCategory}
                 movieResults={movieResults}
                 setMovieResults={setMovieResults}
-                addFavourites={AddFavourite}
-                hendeleFavouriteClick={addFavouriteMovie}
                 totalPage={totalPage}
                 setTotalPage={setTotalPage}
                 apiKey={apiKey}
@@ -251,8 +216,6 @@ const App = () => {
                 totalPage={totalPage}
                 movieResults={movieResults}
                 setMovieResults={setMovieResults}
-                addFavourites={AddFavourite}
-                hendeleFavouriteClick={addFavouriteMovie}
                 setTotalPage={setTotalPage}
                 apiKey={apiKey}
                 pageNo={pageNo}
@@ -271,8 +234,6 @@ const App = () => {
                 totalPage={totalPage}
                 movieResults={movieResults}
                 setMovieResults={setMovieResults}
-                addFavourites={AddFavourite}
-                hendeleFavouriteClick={addFavouriteMovie}
                 setTotalPage={setTotalPage}
                 apiKey={apiKey}
                 pageNo={pageNo}
@@ -290,8 +251,6 @@ const App = () => {
                 category={tvCategory}
                 movieResults={movieResults}
                 setMovieResults={setMovieResults}
-                addFavourites={AddFavourite}
-                hendeleFavouriteClick={addFavouriteMovie}
                 totalPage={totalPage}
                 setTotalPage={setTotalPage}
                 apiKey={apiKey}
@@ -320,6 +279,7 @@ const App = () => {
 
             <Route exact path="/searchBar">
               <SearchBar
+                ctype="genral"
                 setTotalPage={setTotalPage}
                 totalPage={totalPage}
                 apiKey={apiKey}

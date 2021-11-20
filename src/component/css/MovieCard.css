@@ -19,23 +19,30 @@
   align-items: center;
   max-width: 100%;
   flex-wrap: wrap;
-background-color: rgba(255, 255, 255, 0);
+background-color: rgba(228, 36, 36, 0);
 }
-.cardSty .card {
+.cardSty .vanilaCard{
+  background-color: #dd1d1d01;
   position: relative;
-  width: 280px;
+  margin-top: 5px;
+  margin-left: 0px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 20px 20px 50px rgb(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+.cardSty .vanilaCard .card {
+  position: relative;
+  width: 270px;
   height: 500px;
   margin: 20px;
-  box-shadow: 20px 20px 50px rgb(0, 0, 0, 0.5);
-  background-color: #ffffff01;
+  background-color: #dd1d1d01;
   border-radius: 15px;
   overflow: hidden;
   display: flex;
   justify-content: center;
+  border: none;
   align-items: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-left: 1px solid rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(5px);
 }
 .cardSty .card .contents {
   padding: 10px;
@@ -81,24 +88,33 @@ background-color: rgba(255, 255, 255, 0);
   top: 0px;
 }
 .cardSty .card .hoverContent .contentitem{
-  margin-top: 20px;
+  margin-top: 30px;
   
 }
 
-.cardSty .card .hoverContent .contentitem p span{
-    font-weight: 900;
-    font-size: 24px;
-    padding-top: 10px;
+.cardSty .card .hoverContent .contentitem p {
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-radius: 10px 0px;
+    padding-left: 5px;    
+    padding-bottom: 10px;    
+    
 }
+.cardSty .card .hoverContent .contentitem p span{
+  font-weight: 500;
+  font-size: 20px;
+  
+}
+
+
 .cardSty .card .hoverContent .imgfluid{
   height: auto;
-  width: 280px;
-  
+  width: 250px;
+padding-bottom: 5px;  
 }
 .cardSty .card:hover .hoverContent{
     transform: translateY(0%);
     transition: transform 0.5s ease-in-out;
-    cursor: pointer;
 }
 .cardSty .card:hover .contents{
  
@@ -163,3 +179,4 @@ margin-top: 125px;
   position: absolute;
   left: 44vw;
 }
+

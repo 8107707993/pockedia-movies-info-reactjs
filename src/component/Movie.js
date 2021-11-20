@@ -18,7 +18,7 @@ const Movie = (props) => {
   const setPageNo =props.setPageNo;
   const totalPage =props.totalPage;
   const setTotalPage = props.setTotalPage;
-  const addfavouritesMovie = props.hendeleFavouriteClick;
+  const category = props.category;
   useEffect(() => {
     axios
       .get(
@@ -28,7 +28,7 @@ const Movie = (props) => {
         if (!data.errors) {
           setMovieResults(data.results);
           setTotalPage(data.total_pages);
-          console.log(data);
+          // console.log(data);
           
         } else {
           setMovieResults([]);
@@ -50,9 +50,12 @@ const Movie = (props) => {
    return str.charAt(0).toUpperCase() + str.slice(1);
   }
 
+
+  
   return (
-    <><div className="title">{capitise(props.type)}</div>
-      <div className="pageLableBox">
+    <>
+    <div className="title">{capitise(props.type)}</div>
+      <div className="pageLableBox" style={{zIndex:"100"}}>
         <p className="pageLable">Page No :{pageNo}</p>
       </div>
       <div className="container container-bg  my-4">
@@ -73,6 +76,7 @@ const Movie = (props) => {
                 <div className="col-md-4 cardSty" key={element.id}>
                   <Movieitem
                     elements={element}
+                    category={category}
                     language={element.original_language}
                     vote_average={element.vote_average}
                     original_title={element.original_title || element.original_name}
